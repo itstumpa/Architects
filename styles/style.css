@@ -214,22 +214,25 @@ margin-top: -80px;
       margin-bottom: 80px;
 }
 
-.section-3-container-cards{
-      display: flex;
-      /* gap: 160px; */
-      text-align: center;
-      justify-content: space-around;
-      align-items: center;
-      padding-left: 50px;
+
+
+.section-3-container-cards {
+  display: flex;
+  text-align: center;
+  justify-content: space-between; /* more even */
+  align-items: stretch;
+  gap: 80px; 
+  padding-left: 40px; 
 }
-.s-3-card{
-      flex: 1;
-      border: 1px solid orange;
-padding: 70px 0;
-border-radius: 10px;
-/* gap: 70px; */
-margin-right: 70px;
+
+.s-3-card {
+  flex: 1;
+  border: 1px solid orange;
+  padding: 70px 0;
+  border-radius: 10px;
+  margin: 0;
 }
+
 .s-3-card img{
       margin-bottom: 10px;
 }
@@ -267,4 +270,120 @@ margin-bottom: 20px;
       padding: 30px;
       margin-bottom: 200px;
       border-radius: 5px;
+}
+
+
+/* ========== Responsive Design for Mobile ========== */
+@media (max-width: 576px) {
+
+  .navbar {
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+  }
+
+  .navbar-content ul {
+    flex-direction: column;
+    gap: 20px;
+    font-size: 1rem;
+  }
+
+  .hero-section {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .hero-section h1 {
+    font-size: 2rem;
+  }
+
+  .hero-img {
+    /* width: 20%;
+    padding: 0 20px; */
+    display: none;
+  }
+
+  .section-1, .section-2, .section-3-container, .section-4-container {
+    flex-direction: column;
+    width: 100%;
+    padding: 20px;
+    gap: 30px;
+    margin-bottom: 5px;
+  }
+
+  .section-1-img {
+    grid-template-columns: 1fr;
+  }
+.section-2-img{
+display: none;
+}
+  .section-2 {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .section-3-container-cards {
+    flex-direction: column;
+    padding: 0;
+    align-items: center;
+    /* margin-bottom: 10px; */
+  }
+
+  .s-3-card {
+    
+    padding: 30px 40px;
+    margin: 10px 0;
+  width: 50%;
+  
+  }
+
+  .section-4-img {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .section-2-img h1 {
+    position: static;
+    margin: 0 auto;
+    width: 100%;
+    height: auto;
+    padding: 20px 0;
+    font-size: 2.5rem;
+  }
+
+  .section-2-img h1 span {
+    font-size: 1.2rem;
+  }
+
+  .section-2-content h1 {
+    font-size: 2rem;
+  }
+
+  .section-4-title h1,
+  .section-3-container-title h1,
+  .section-1-content h1 {
+    font-size: 2rem;
+  }
+
+  .section-4-title p,
+  .section-3-container-title p,
+  .section-1-content p {
+    font-size: 0.9rem;
+  }
+
+  .btn-primary {
+    padding: 15px 20px;
+    font-size: 1rem;
+  }
+
+}
+
+@media (min-width: 577px) and (max-width: 786px) {
+
+}
+
+
+@media (min-width: 787px) and (max-width: 992px) {
+
 }
